@@ -27,6 +27,9 @@ task rmicGen(type:Exec) {
                 'build/libs/vectorapp_rmic.ear',
                 '-nowarn'
 }
+plugins {
+  id "org.sonarqube" version "2.6"
+}
 
 build.finalizedBy rmicGen
 
