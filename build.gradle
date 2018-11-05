@@ -1,0 +1,31 @@
+apply plugin: 'ear'
+
+repositories {
+  maven {
+    url 'http://138.69.14.78:8085/artifactory/FLCSS-eCustomer-JavaBatch-local'
+  }
+}
+
+dependencies {
+  deploy project(path: ':vectorweb', configuration: 'archives')
+  deploy project(path: ':vectorwsweb', configuration: 'archives')
+  deploy project(':vectoraccount-ejb')
+  deploy project(':vectorcommon')
+  deploy project(':vectorexception')
+  deploy project(':vectorpersistence')
+  deploy project(':vectorsiebelgateway')
+  deploy project(':vectorutil')
+
+  //earlib name: 'HexCore', ext: 'jar'
+}
+
+task rmicGen(type:Exec) {
+    description = "Build the RMIC stuff woooooo!"
+    commandLine 'C:/app/product/mw85/bin/ejbdeploy.bat',
+                'build/libs/vectorapp.ear',
+                'build',
+                'build/libs/vectorapp_rmic.ear',
+                '-nowarn'
+}
+
+build.finalizedBy rmicGen

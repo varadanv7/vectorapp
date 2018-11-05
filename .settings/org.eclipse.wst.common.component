@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="vectorapp">
+        <wb-resource deploy-path="/" source-path="/src/main/application"/>
+        <dependent-module archiveName="vectorweb.war" deploy-path="/" handle="module:/resource/vectorweb/vectorweb">
+            <dependent-object>WebModule_1190157161796</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vectorpersistence.jar" deploy-path="/" handle="module:/resource/vectorpersistence/vectorpersistence">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vectorcommon.jar" deploy-path="/" handle="module:/resource/vectorcommon/vectorcommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vectorexception.jar" deploy-path="/" handle="module:/resource/vectorexception/vectorexception">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vectorsiebelgateway.jar" deploy-path="/" handle="module:/resource/vectorsiebelgateway/vectorsiebelgateway">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vectorutil.jar" deploy-path="/" handle="module:/resource/vectorutil/vectorutil">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vectoraccount-ejb.jar" deploy-path="/" handle="module:/resource/vectoraccount-ejb/vectoraccount-ejb">
+            <dependent-object>EjbModule_1192632533474</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="vectorwsweb.war" deploy-path="/" handle="module:/resource/vectorwsweb/vectorwsweb">
+            <dependent-object>WebModule_1305573650624</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
